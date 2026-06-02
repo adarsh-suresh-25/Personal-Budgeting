@@ -1,29 +1,22 @@
+# Secrets
+backend/config.py
+.env
+
+# Database
+budget.db
+*.db
+
 # Python
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
 
-# Virtual Environment
+# Virtual Environments
 venv/
-env/
 .venv/
-
-# Database
-*.db
-*.sqlite3
-
-# Environment Variables
-.env
-
-# API Keys
-config.py
 
 # VS Code
 .vscode/
-
-# PyCharm
-.idea/
 
 # OS Files
 .DS_Store
