@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Budget Control Login</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="login-body">
+    <div class="login-wrapper">
+      <div class="login-box">
+        <h1>Budget Control AI</h1>
+
+        <p>Agentic AI Financial Assistant</p>
+
+        <div class="tabs">
+          <button id="loginTab" class="active-tab" onclick="showLogin()">
+            Login
+          </button>
+
+          <button id="registerTab" onclick="showRegister()">Register</button>
+        </div>
+
+        <!-- LOGIN -->
+
+        <div id="loginForm">
+          <input type="email" id="loginEmail" placeholder="Enter Email" />
+
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter Password"
+          />
+
+          <button onclick="login()">Login</button>
+        </div>
+
+        <!-- REGISTER -->
+
+        <div id="registerForm" style="display: none">
+          <input type="text" id="registerName" placeholder="Full Name" />
+
+          <input type="email" id="registerEmail" placeholder="Email" />
+
+          <input type="password" id="registerPassword" placeholder="Password" />
+
+          <button onclick="register()">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showLogin() {
+        document.getElementById("loginForm").style.display = "block";
+
+        document.getElementById("registerForm").style.display = "none";
+
+        document.getElementById("loginTab").classList.add("active-tab");
+
+        document.getElementById("registerTab").classList.remove("active-tab");
+      }
+
+      function showRegister() {
+        document.getElementById("loginForm").style.display = "none";
+
+        document.getElementById("registerForm").style.display = "block";
+
+        document.getElementById("registerTab").classList.add("active-tab");
+
+        document.getElementById("loginTab").classList.remove("active-tab");
+      }
+    </script>
+
+    <script src="app.js"></script>
+  </body>
+</html>

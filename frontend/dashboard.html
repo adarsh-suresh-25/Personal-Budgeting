@@ -1,0 +1,127 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Budget Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- TOP BAR -->
+
+      <div class="top-bar">
+        <h1>Budget Dashboard</h1>
+
+        <button onclick="logout()">Logout</button>
+      </div>
+
+      <!-- CARDS -->
+
+      <div class="cards">
+        <div class="card">
+          <h2>Total Expenses</h2>
+
+          <h1 id="totalExpenses">₹0</h1>
+        </div>
+
+        <div class="card">
+          <h2>AI Insight</h2>
+
+          <p id="insightText">Loading...</p>
+        </div>
+      </div>
+
+      <!-- ADD EXPENSE -->
+
+      <div class="expense-form">
+        <h2>Add Expense</h2>
+
+        <input type="number" id="amount" placeholder="Enter Amount" />
+
+        <input type="text" id="description" placeholder="Enter Description" />
+
+        <button onclick="addExpense()">Add Expense</button>
+      </div>
+
+      <!-- CHART -->
+
+      <div class="chart-container">
+        <canvas id="expenseChart"></canvas>
+      </div>
+
+      <!-- TABLE -->
+
+      <div class="table-container">
+        <h2>Expense History</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Amount</th>
+              <th>Category</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="expenseTableBody"></tbody>
+        </table>
+      </div>
+
+    <!-- CHATBOT BUTTON -->
+
+    <div class="chatbot-icon" onclick="toggleChatbot()">
+      <img src="chatbot.png" alt="AI Bot" />
+    </div>
+
+    <!-- CHATBOT PANEL -->
+
+    <div class="chatbot-panel" id="chatbotPanel">
+      <div class="chat-header">
+        <h3>Finance AI Assistant</h3>
+
+        <button onclick="toggleChatbot()">✕</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <div class="bot-message">
+          Hello 👋 <br />
+          I am your Financial Advisor.<br /><br />
+          I can help with:
+          <br />
+          • Budgeting
+          <br />
+          • Savings
+          <br />
+          • Investments
+          <br />
+          • Banking
+          <br />
+          • Loans
+          <br />
+          • Financial Planning
+        </div>
+      </div>
+
+      <div class="chat-input">
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Ask about budgeting, savings, loans or investments..."
+        />
+
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
