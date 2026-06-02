@@ -1,3 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+.venv/
+
+# Database
+*.db
+*.sqlite3
+
+# Environment Variables
+.env
+
+# API Keys
+config.py
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
 WPR week_1.pdf
 WPR week_2.pdf
 WPR week_3.pdf
